@@ -50,12 +50,11 @@ public class main0910 {
                     System.out.println("\nData Penilaian:");
                     for (penilaian0910 n : nilai) n.tampilkanData();
                 }
-                    case 4 -> {
-                        System.out.println("\nData Penilaian (Urut Nilai Akhir):");
-                        penilaian0910[] sorted = pengelolaaan0910.urutkanPenilaianByNilaiAkhir(nilai);
-                        for (penilaian0910 n : sorted) n.tampilkanData();
-                }
-                
+                case 4 -> {
+                    System.out.println("\nData Penilaian (Urut Nilai Akhir):");
+                    penilaian0910[] sorted = pengelolaaan0910.urutkanPenilaianByNilaiAkhir(nilai);
+                    for (penilaian0910 n : sorted) n.tampilkanData();
+                }                
                 case 5 -> {
                     System.out.print("\nMasukkan NIM yang dicari: ");
                     String nimCari = input.nextLine();

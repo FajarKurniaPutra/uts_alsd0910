@@ -8,8 +8,14 @@ public class pengelolaaan0910 {
         return null;
     }
 
+    @SuppressWarnings("ManualArrayToCollectionCopy")
     public static penilaian0910[] urutkanPenilaianByNilaiAkhir(penilaian0910[] daftarNilai) {
-        penilaian0910[] hasil = daftarNilai.clone();
+        penilaian0910[] hasil = new penilaian0910[daftarNilai.length];
+    
+        for (int i = 0; i < daftarNilai.length; i++) {
+            hasil[i] = daftarNilai[i];
+        }
+    
         for (int i = 0; i < hasil.length - 1; i++) {
             for (int j = i + 1; j < hasil.length; j++) {
                 if (hasil[i].hitungNilaiAkhir() < hasil[j].hitungNilaiAkhir()) {
@@ -19,6 +25,7 @@ public class pengelolaaan0910 {
                 }
             }
         }
+    
         return hasil;
-    }
+    }    
 }
